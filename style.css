@@ -1,495 +1,554 @@
-        /* ألوان الموقع */
-        body {
-            background-color: #0f161b;
-            color: #ffffff;
-            font-family: 'Cairo', sans-serif;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-        }
+/* ألوان الموقع */
+body {
+  background-color: #0f161b;
+  color: #ffffff;
+  font-family: "Cairo", sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
 
-        /* تنسيق الهيدر */
-        #header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background-color: rgba(15, 22, 27, 0.8);
-            backdrop-filter: blur(10px);
-            padding: 10px 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            z-index: 999;
-        }
+/* تنسيق الهيدر */
+#header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(15, 22, 27, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 999;
+}
 
-        /* تنسيق اللوقو */
-        #logo {
-            display: flex;
-            align-items: center;
-        }
+/* تنسيق اللوقو */
+#logo {
+  display: flex;
+  align-items: center;
+}
 
-        #logo img {
-            height: 40px;
-            width: auto;
-        }
+#logo img {
+  height: 40px;
+  width: auto;
+}
 
-        /* تنسيق الأقسام */
-        #nav-container {
-            flex-grow: 1;
-            display: flex;
-            justify-content: center;
-        }
+/* تنسيق الأقسام */
+#nav-container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
 
-        #nav {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 15px;
-        }
+#nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
 
-        #nav a {
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 1.1em;
-            padding: 8px 12px;
-            transition: all 0.3s ease;
-        }
+#nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.1em;
+  padding: 8px 12px;
+  transition: all 0.3s ease;
+}
 
-        #nav a::after {
-            content: "|";
-            margin-left: 15px;
-            color: #555555;
-        }
+#nav a::after {
+  content: "|";
+  margin-left: 15px;
+  color: #555555;
+}
 
-        #nav a:last-child::after {
-            content: "";
-        }
+#nav a:last-child::after {
+  content: "";
+}
 
-        #nav a:hover {
-            color: #0e98aa;
-            transform: scale(1.1);
-        }
+#nav a:hover {
+  color: #0e98aa;
+  transform: scale(1.1);
+}
 
-        /* تنسيق اللودر */
-        #loader {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(15, 22, 27, 0.9);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            text-align: center;
-            z-index: 1000;
-            backdrop-filter: blur(8px);
-            transition: opacity 1s ease;
-        }
+/* تنسيق اللودر */
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(15, 22, 27, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+  transition: opacity 1s ease;
+}
 
-        .loading-text {
-            font-size: 24px;
-            color: #0e98aa;
-        }
+.loading-text {
+  font-size: 24px;
+  color: #0e98aa;
+}
 
-        /* تنسيق الصورة */
-        #image-container {
-            position: relative;
-            width: 100%;
-            height: 100vh;
-            overflow: hidden;
-        }
+/* تنسيق الصورة */
+#image-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
 
-        #background-image {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: -1;
-        }
+#background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
 
-        /* زر "تعرف على الفريق" */
-        #team-button {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            padding: 15px 30px;
-            background-color: transparent;
-            color: #ffffff;
-            border: 2px solid #0e98aa;
-            cursor: pointer;
-            font-size: 1.2em;
-            font-family: 'Cairo', sans-serif;
-            border-radius: 30px;
-            transition: background-color 0.3s ease, backdrop-filter 0.3s ease, color 0.3s ease, transform 0.3s ease;
-            animation: bounce 1.5s infinite alternate;
-        }
+/* زر "تعرف على الفريق" */
+#team-button {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 15px 30px;
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #0e98aa;
+  cursor: pointer;
+  font-size: 1.2em;
+  font-family: "Cairo", sans-serif;
+  border-radius: 30px;
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease,
+    color 0.3s ease, transform 0.3s ease;
+  animation: bounce 1.5s infinite alternate;
+}
 
-        #team-button:hover {
-            backdrop-filter: blur(8px);
-            background-color: rgba(14, 152, 170, 0.2);
-            color: #ffffff;
-        }
+#team-button:hover {
+  backdrop-filter: blur(8px);
+  background-color: rgba(14, 152, 170, 0.2);
+  color: #ffffff;
+}
 
-        /* انميشن لتحريك الزر للأعلى والأسفل */
-        @keyframes bounce {
-            0% {
-                transform: translate(-50%, 0);
-            }
-            100% {
-                transform: translate(-50%, 10px);
-            }
-        }
+/* انميشن لتحريك الزر للأعلى والأسفل */
+@keyframes bounce {
+  0% {
+    transform: translate(-50%, 0);
+  }
+  100% {
+    transform: translate(-50%, 10px);
+  }
+}
 
+/* تنسيق القسم الثاني */
+#about-section {
+  padding: 100px 20px;
+  background-color: #0f161b;
+  text-align: center;
+  color: #ffffff;
+}
 
-        /* تنسيق القسم الثاني */
-        #about-section {
-            padding: 100px 20px;
-            background-color: #0f161b;
-            text-align: center;
-            color: #ffffff;
-        }
+#about-section h2 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  position: relative;
+  display: inline-block;
+}
 
-        #about-section h2 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            position: relative;
-            display: inline-block;
-        }
+#about-section h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #0e98aa;
+  margin: 10px auto;
+}
 
-        #about-section h2::after {
-            content: "";
-            display: block;
-            width: 60px;
-            height: 4px;
-            background-color: #0e98aa;
-            margin: 10px auto;
-        }
+.about_Container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
 
-        #about-section p {
-            font-size: 1.2em;
-            line-height: 1.8;
-            max-width: 800px;
-            margin: 0 auto 30px auto;
-        }
+.about_Container p {
+  font-size: 1.2em;
+  line-height: 1.8;
+  max-width: 800px;
+}
 
-        .about-stats {
-            display: flex;
-            justify-content: center;
-            gap: 50px;
-            flex-wrap: wrap;
-            margin-top: 50px;
-        }
+.about_Container .img_about img {
+    position: relative;
+    display: block;
+    width: 250px;
+    height: 250px;
+  }
+  
+  .about_Container .img_about img::before,
+  .about_Container .img_about img::after {
+    content: "";
+    position: absolute;
+    bottom: 10px; 
+    right: 10px;
+    width: 50%; /* عرض أصغر لتجنب التداخل مع الصورة */
+    height: 30px; /* ارتفاع مناسب */
+    background-color: #0e98aa;
+    z-index: -1; /* التأكد من أن العناصر تظهر فوق الصورة */
+  }
+  
+  .about_Container img::after {
+    bottom: 0; /* تغيير مكان العنصر بعد */
+  }
 
-        .about-stat {
-            text-align: center;
-            max-width: 150px;
-        }
+.about-stats {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
 
-        .about-stat-icon {
-            font-size: 3em;
-            color: #0e98aa;
-            margin-bottom: 10px;
-        }
+.about-stat {
+  text-align: center;
+  max-width: 150px;
+}
 
-        .about-stat-title {
-            font-size: 1.5em;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
+.about-stat-icon {
+  font-size: 3em;
+  color: #0e98aa;
+  margin-bottom: 10px;
+}
 
-        .about-stat-description {
-            font-size: 1em;
-            color: #888;
-        }
+.about-stat-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
 
-        /* قسم الفريق */
-        #team {
-            padding: 50px;
-            text-align: center;
-            background-color: #0f1a23;
-            color: #ffffff;
-        }
-        #team h3 {
-            font-size: 1.8em;
-            margin-bottom: 30px;
-            color: #0e98aa;
-        }
-        .team-container {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-            justify-items: center;
-        }
-        .team-card {
-            background-color: #1a2b36;
-            border-radius: 16px;
-            padding: 30px;
-            width: 250px;
-            text-align: center;
-            transition: transform 0.3s;
-        }
-        .team-card:hover {
-            transform: scale(1.05);
-        }
-        .team-card img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 15px;
-        }
-        .team-card h4 {
-            margin: 10px 0 5px;
-            font-size: 2em;
-        }
-       
-        /* تنسيق الأيقونات الخاصه بالفريق*/
+.about-stat-description {
+  font-size: 1em;
+  color: #888;
+}
 
-        .social-links {
-            margin-top: 10px;
-        }
+/* قسم الفريق */
+#team {
+  padding: 50px;
+  text-align: center;
+  background-color: #0f1a23;
+  color: #ffffff;
+}
+#team h3 {
+  position: relative;
+  font-size: 1.8em;
+  margin-bottom: 30px;
+  color: white;
+}
+#team h3::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #0e98aa;
+  margin: 10px auto;
+}
 
-        .social-icon {
-            font-size: 24px;
-            margin: 0 10px;
-            color: #fff; 
-            transition: color 0.3s ease
-        }
+.team-container {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  gap: 20px;
+}
+.team-card {
+  background-color: #1a2b36;
+  border-radius: 16px;
+  padding: 30px;
+  width: 250px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  border: 1px rgba(255, 255, 255, 0.26) solid;
+}
+.team-card:hover {
+  transform: scale(1.05);
+  box-shadow: white 1px 2px 20px;
+}
+.team-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+.team-card h4 {
+  margin: 10px 0 5px;
+  font-size: 2em;
+}
 
-        .social-icon:hover {
-            color: #0077ff; 
-        }
+/* تنسيق الأيقونات الخاصه بالفريق*/
 
-        .discord:hover {
-            color: #7289da; 
-        }
+.social-links {
+  margin-top: 10px;
+}
 
-        .instagram:hover {
-            color: #e4405f; 
-        }
+.social-links a {
+  font-size: 24px;
+  margin: 0 10px;
+  color: #fff;
+}
 
-        .twitter:hover {
-            color: #1da1f2;
-        }
+.social-icon:hover {
+  color: #0077ff;
+}
 
+.discord:hover {
+  color: #7289da;
+}
 
-        /* قسم الألعاب */
-        #games {
-            padding: 50px;
-            background-color: #0f161b;
-            text-align: center;
-        }
-        #games h3 {
-            font-size: 2.7em;
-            color: white;
-            margin-bottom: 30px;
-            border-bottom: #0e98aa 2px solid;
-        }
-        .games-container {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-            justify-items: center;
-            padding: 0 20px;
-        }
-        .game-card-wrapper {
-            background-color: #1a1f24;
-            border-radius: 16px;
-            padding: 10px;
-            transition: transform 0.3s;
-            width: 340px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-        }
-        .game-card-wrapper:hover {
-            transform: scale(1.05);
-        }
-        .game-card {
-            background-color: #0f161b;
-            border-radius: 12px;
-            overflow: hidden;
-            color: #ffffff;
-            text-decoration: none;
-            display: flex;
-            flex-direction: column;
-        }
-        .game-image {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-            border-radius: 12px;
-        }
-        .game-info {
-            padding: 15px;
-            text-align: right;
-        }
-        .game-info h4 {
-            font-size: 1.4em;
-            margin: 10px 0;
-            color: #ffffff;
-        }
-        .game-info p {
-            font-size: 1em;
-            color: #b0b0b0;
-        }
-        .game-info .platforms, .game-info .release-date {
-            font-size: 0.9em;
-            color: #8c8c8c;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            justify-content: flex-end;
-        }
-        .platforms-icon, .release-date-icon {
-            font-size: 1.2em;
-        }
-       
-               /* كود أنيميشن النقر */
-               .game-card-wrapper.clicked {
-            animation: clickAnimation 0.5s forwards;
-        }
-        @keyframes clickAnimation {
-            0% { transform: scale(1); }
-            50% { transform: scale(0.9); }
-            100% { transform: scale(1); }
-        }
-                /* تنسيق البطاقات */
-                .games-container {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
+.instagram:hover {
+  color: #e4405f;
+}
 
-        /* أنيميشن الظهور التدريجي */
-        .game-card-wrapper {
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 0.6s ease forwards;
-        }
+.twitter:hover {
+  color: #1da1f2;
+}
 
-        /* تأخير الأنيميشن لكل بطاقة */
-        .game-card-wrapper:nth-child(1) { animation-delay: 0.1s; }
-        .game-card-wrapper:nth-child(2) { animation-delay: 0.2s; }
-        .game-card-wrapper:nth-child(3) { animation-delay: 0.3s; }
-        .game-card-wrapper:nth-child(4) { animation-delay: 0.4s; }
+/* قسم الألعاب */
+#games {
+  padding: 50px;
+  background-color: #0f161b;
+  text-align: center;
+}
+#games h3 {
+  font-size: 2.7em;
+  color: white;
+  margin-bottom: 30px;
+  border-bottom: #0e98aa 2px solid;
+}
+.games-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-items: center;
+  padding: 0 20px;
+}
+.game-card-wrapper {
+  background-color: #1a1f24;
+  border-radius: 16px;
+  padding: 10px;
+  transition: transform 0.3s;
+  width: 340px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+.game-card-wrapper:hover {
+  transform: scale(1.05);
+}
+.game-card {
+  background-color: #0f161b;
+  border-radius: 12px;
+  overflow: hidden;
+  color: #ffffff;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+}
+.game-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.game-info {
+  padding: 15px;
+  text-align: right;
+}
+.game-info h4 {
+  font-size: 1.4em;
+  margin: 10px 0;
+  color: #ffffff;
+}
+.game-info p {
+  font-size: 1em;
+  color: #b0b0b0;
+}
+.game-info .platforms,
+.game-info .release-date {
+  font-size: 0.9em;
+  color: #8c8c8c;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: flex-end;
+}
+.platforms-icon,
+.release-date-icon {
+  font-size: 1.2em;
+}
 
-        /* أنيميشن عند النقر */
-        .game-card-wrapper.clicked {
-            animation: clickAnimation 0.5s forwards;
-        }
-        @keyframes clickAnimation {
-            0% { transform: scale(1); }
-            50% { transform: scale(0.9); }
-            100% { transform: scale(1); }
-        }
+/* كود أنيميشن النقر */
+.game-card-wrapper.clicked {
+  animation: clickAnimation 0.5s forwards;
+}
+@keyframes clickAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* تنسيق البطاقات */
+.games-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
 
-        /* تأثير عند تمرير الفأرة */
-        .game-card:hover {
-            transform: scale(1.05);
-            transition: transform 0.3s ease;
-        }
+/* أنيميشن الظهور التدريجي */
+.game-card-wrapper {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+}
 
-        /* تأثير التلاشي التدريجي للصفحة */
-        .fade-out {
-            opacity: 0;
-            transition: opacity 1s ease, background-color 1s ease;
-        }
+/* تأخير الأنيميشن لكل بطاقة */
+.game-card-wrapper:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.game-card-wrapper:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.game-card-wrapper:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.game-card-wrapper:nth-child(4) {
+  animation-delay: 0.4s;
+}
 
-        /* طبقة تغطية */
-        #overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #0f161b;
-            opacity: 0;
-            pointer-events: none;
-            z-index: 9999;
-            transition: opacity 1s ease;
-        }
+/* أنيميشن عند النقر */
+.game-card-wrapper.clicked {
+  animation: clickAnimation 0.5s forwards;
+}
+@keyframes clickAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 
-        /* تعريف أنيميشن الظهور */
-        @keyframes fadeInUp {
-            0% {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        /* تذييل الصفحة */
-        footer {
-            background-color: #0f161b;
-            padding: 20px;
-            text-align: center;
-            color: #ffffff;
-        }
-        .social-icons a {
-            color: #ffffff;
-            margin: 0 10px;
-            font-size: 1.5em;
-            transition: color 0.3s;
-        }
-        .social-icons a:hover {
-            color: #0e98aa;
-        }
+/* تأثير عند تمرير الفأرة */
+.game-card:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
 
-        /* تأثيرات التمرير والانتقال */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 1s, transform 1s;
-        }
-        .visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
+/* تأثير التلاشي التدريجي للصفحة */
+.fade-out {
+  opacity: 0;
+  transition: opacity 1s ease, background-color 1s ease;
+}
 
+/* طبقة تغطية */
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0f161b;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 9999;
+  transition: opacity 1s ease;
+}
 
-        /* النقطة التي ستتبع المؤشر */
-        .cursor-dot {
-            position: absolute;
-            width: 12px; /* حجم النقطة */
-            height: 12px;
-            background-color: #0e98aa; /* لون النقطة */
-            border-radius: 50%; /* شكل دائري */
-            pointer-events: none; /* منع التفاعل مع النقطة */
-            transition: transform 0.1s ease, left 0.15s ease, top 0.15s ease;
-            transform: translate(-50%, -50%);
-        }
+/* تعريف أنيميشن الظهور */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* تذييل الصفحة */
+footer {
+  background-color: #0f161b;
+  padding: 20px;
+  text-align: center;
+  color: #ffffff;
+}
+.social-icons a {
+  color: #ffffff;
+  margin: 0 10px;
+  font-size: 1.5em;
+  transition: color 0.3s;
+}
+.social-icons a:hover {
+  color: #0e98aa;
+}
 
+/* تأثيرات التمرير والانتقال */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s, transform 1s;
+}
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
-        .fade-out {
-            opacity: 0;
-            transition: opacity 1s ease, background-color 1s ease;
-        }
+/* النقطة التي ستتبع المؤشر */
+.cursor-dot {
+  position: absolute;
+  width: 12px; /* حجم النقطة */
+  height: 12px;
+  background-color: #0e98aa; /* لون النقطة */
+  border-radius: 50%; /* شكل دائري */
+  pointer-events: none; /* منع التفاعل مع النقطة */
+  transition: transform 0.1s ease, left 0.15s ease, top 0.15s ease;
+  transform: translate(-50%, -50%);
+}
 
+.fade-out {
+  opacity: 0;
+  transition: opacity 1s ease, background-color 1s ease;
+}
 
-
-                /* زر العودة لأعلى الصفحة */
-                #back-to-top {
-            display: none;
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #0e98aa;
-            color: #ffffff;
-            border: none;
-            border-radius: 50%;
-            padding: 10px;
-            font-size: 1.5em;
-            cursor: pointer;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-            transition: background 0.3s;
-        }
-        #back-to-top:hover {
-            background-color: #ffffff;
-            color: #0e98aa;
-        }
+/* زر العودة لأعلى الصفحة */
+#back-to-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #0e98aa;
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 1.5em;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  transition: background 0.3s;
+}
+#back-to-top:hover {
+  background-color: #ffffff;
+  color: #0e98aa;
+}
