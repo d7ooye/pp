@@ -55,88 +55,20 @@
                 <img src="./1.png" alt="محمد">
                 <h4>محمد</h4>
                 <p>مبرمج و مدقق</p>
-            </div>
-        </div>
-
-        <div class="team-container">
-            <div class="team-card">
-                <img src="./1.png" alt="محمد">
-                <h4>Abdulrhamn Shafiea</h4>
-                <p>مبرمج و مدقق</p>
-            </div>
-        </div>
-
-
-        <div class="team-container">
-            <div class="team-card">
-                <img src="./1.png" alt="محمد">
-                <h4>محمد</h4>
-                <p>مبرمج و مدقق</p>
                 <div class="social-links">
-                <i class="fa-brands fa-instagram"></i>
-                <i class="fa-brands fa-discord"></i>
+                    <a href="#" onclick="copyDiscordUsername('ikrp')" class="social-icon discord">
+                        <i class="fab fa-discord"></i>
+                    </a>
+                    <a href="https://instagram.com/ik_rrp" target="_blank" class="social-icon instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://x.com/Siverslayer" target="_blank" class="social-icon twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
             </div>
-        </div>
-
-
-
-        <div class="team-container">
-            <div class="team-card">
-                <img src="./1.png" alt="محمد">
-                <h4>محمد</h4>
-                <p>مبرمج و مدقق</p>
-            </div>
-        </div>
-
-
-
-        <div class="team-container">
-            <div class="team-card">
-                <img src="./1.png" alt="محمد">
-                <h4>محمد</h4>
-                <p>مبرمج و مدقق</p>
-            </div>
-        </div>
-
-
-
-        <div class="team-container">
-            <div class="team-card">
-                <img src="./1.png" alt="محمد">
-                <h4>محمد</h4>
-                <p>مبرمج و مدقق</p>
-            </div>
-        </div>
-
-
-
-        <div class="team-container">
-            <div class="team-card">
-                <img src="./1.png" alt="محمد">
-                <h4>محمد</h4>
-                <p>مبرمج و مدقق</p>
-            </div>
-        </div>
-
-
-
-        <div class="team-container">
-            <div class="team-card">
-                <img src="./1.png" alt="محمد">
-                <h4>محمد</h4>
-                <p>مبرمج و مدقق</p>
-            </div>
-        </div>
-
-
-        <div class="team-container">
-            <div class="team-card">
-                <img src="./1.png" alt="محمد">
-                <h4>محمد</h4>
-                <p>مبرمج و مدقق</p>
-            </div>
-        </div>
     </section>
+    
 
 
 
@@ -239,6 +171,28 @@ window.addEventListener('pageshow', (event) => {
             window.scrollTo({ top: 0, behavior: "smooth" });
         }
 
+
+
+
+        function copyDiscordUsername(username) {
+        // إنشاء عنصر input مؤقت لنسخ اسم المستخدم
+        const tempInput = document.createElement('input');
+        tempInput.value = username;  // نستخدم المتغير المرسل كاسم المستخدم
+        document.body.appendChild(tempInput);
+        
+        // تحديد النص داخل input
+        tempInput.select();
+        tempInput.setSelectionRange(0, 99999); // للهواتف
+
+        // نسخ النص
+        document.execCommand('copy');
+
+        // إزالة عنصر input بعد النسخ
+        document.body.removeChild(tempInput);
+
+        // إظهار رسالة للمستخدم (اختياري)
+        alert("تم نسخ اسم المستخدم: " + username);
+    }
 
     </script>
 </body>
