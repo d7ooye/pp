@@ -1,236 +1,314 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="ar">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <title>العب بالعربي</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500&family=Roboto:wght@700&display=swap" rel="stylesheet">
-     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-     <script src="https://kit.fontawesome.com/c3f535ee9c.js" crossorigin="anonymous"></script>
-     <link rel="stylesheet" href="./style.css" >
-
-    </head>
-<body>
-
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@500&family=Roboto:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/c3f535ee9c.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
     <!-- اللودر -->
     <div id="loader">
-        <h1 class="loading-text"></h1>
+      <h1 class="loading-text"></h1>
     </div>
 
     <!-- الهيدر -->
     <header id="header">
-        <div id="logo">
-            <img src="/mnt/data/logo.png" alt="لوقو">
-        </div>
-        <div id="nav-container">
-            <nav id="nav">
-                <a href="#home">الرئيسية</a>
-                <a href="#translations">تعريباتنا</a>
-                <a href="#contact">تواصل معنا</a>
-                <a href="#discord">الدكسورد</a>
-                <a href="#support">الدعم</a>
-            </nav>
-        </div>
+      <div id="logo">
+        <img src="/mnt/data/logo.png" alt="لوقو" />
+      </div>
+      <div id="nav-container">
+        <nav id="nav">
+          <a href="#home">الرئيسية</a>
+          <a href="#translations">تعريباتنا</a>
+          <a href="#contact">تواصل معنا</a>
+          <a href="#discord">الدكسورد</a>
+          <a href="#support">الدعم</a>
+        </nav>
+      </div>
     </header>
 
     <!-- الصورة مع زر "تعرف على الفريق" -->
     <div id="image-container">
-        <img id="background-image" src="./red_dead_background_3.jpg" alt="خلفية">
-        <button id="team-button" onclick="scrollToTeam()">تعرف على الفريق</button>
+      <img
+        id="background-image"
+        src="./red_dead_background_3.jpg"
+        alt="خلفية"
+      />
+      <button id="team-button" onclick="scrollToTeam()">تعرف على الفريق</button>
     </div>
 
     <!-- القسم الثاني: من نحن -->
     <section id="about-section">
-        <h2>من نحن؟</h2>
-        <div class="about_Container">
-       <div class="text-about">
-
-           <p>    
-        
-                 بدأت رحلتنا في هذا المجال عام 2021.
-                 نسعى جاهدين لجعل عالم الألعاب
-                 أكثر إثراءً وتنوعًا للجماهير الناطقة بالعربية.
-                 من خلال مهاراتنا وشغفنا بالترجمة والتعريب،
-                 نعمل على توفير تجارب لعب ممتعة ومحفزة للملايين من اللاعبين
-                 العرب حول العالم.
-                 تقديم ألعاب باللغة التي يفهمونها بشكل كامل يجعلها تجربة ممتعة ومعبِّرة بالنسبة لنا و نعتز بإسهاماتنا ونتطلع دائمًا إلى تقديم الأفضل والمزيد من التحسينات في مجال تعريب الألعاب .
-           </p>
-       </div>
-            <div class="img_about">
-
-                <img src="./ARAB.png" alt="img"/>
-            </div>
+      <h2>من نحن؟</h2>
+      <div class="about_Container">
+        <div class="text-about">
+          <p>
+            بدأت رحلتنا في هذا المجال عام 2021. نسعى جاهدين لجعل عالم الألعاب
+            أكثر إثراءً وتنوعًا للجماهير الناطقة بالعربية. من خلال مهاراتنا
+            وشغفنا بالترجمة والتعريب، نعمل على توفير تجارب لعب ممتعة ومحفزة
+            للملايين من اللاعبين العرب حول العالم. تقديم ألعاب باللغة التي
+            يفهمونها بشكل كامل يجعلها تجربة ممتعة ومعبِّرة بالنسبة لنا و نعتز
+            بإسهاماتنا ونتطلع دائمًا إلى تقديم الأفضل والمزيد من التحسينات في
+            مجال تعريب الألعاب .
+          </p>
         </div>
+        <div class="img_about">
+          <img src="./ARAB.png" alt="img" />
+        </div>
+      </div>
     </section>
 
     <!-- قسم الفريق -->
 
     <section id="team" class="team">
-        <h3>فريقنا</h3>
-        <div class="team-container">
-            <div class="team-card">
-                <img src="./ARAB.png" alt="محمد">
-                <h4>محمد</h4>
-                <p>مبرمج و مدقق</p>
-                <div class="social-links">
-                    <a href="#" onclick="copyDiscordUsername('ikrp')" class="social-icon discord">
-                        <i class="fab fa-discord"></i>
-                    </a>
-                    <a href="https://instagram.com/ik_rrp" target="_blank" class="social-icon instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://x.com/Siverslayer" target="_blank" class="social-icon twitter">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="team-card">
-                <img src="./1.png" alt="إياد">
-                <h4>إياد</h4>
-                <p>مبرمج و مدقق</p>
-                <div class="social-links">
-                    <a href="#" onclick="copyDiscordUsername('css.8')" class="social-icon discord">
-                        <i class="fab fa-discord"></i>
-                    </a>
-                    <a href="https://instagram.com/Stalk.dev" target="_blank" class="social-icon instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://x.com/stralkg" target="_blank" class="social-icon twitter">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                </div>
-            </div>
+      <h3>فريقنا</h3>
+      <div class="team-container">
+        <div class="team-card">
+          <img src="./ARAB.png" alt="محمد" />
+          <h4>محمد</h4>
+          <p>مبرمج و مدقق</p>
+          <div class="social-links">
+            <a
+              href="#"
+              onclick="copyDiscordUsername('ikrp')"
+              class="social-icon discord"
+            >
+              <i class="fab fa-discord"></i>
+            </a>
+            <a
+              href="https://instagram.com/ik_rrp"
+              target="_blank"
+              class="social-icon instagram"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a
+              href="https://x.com/Siverslayer"
+              target="_blank"
+              class="social-icon twitter"
+            >
+              <i class="fab fa-twitter"></i>
+            </a>
+          </div>
         </div>
+
+        <div class="team-card">
+          <img src="./104e29c94fe8a8e4e7d0c7832c6a7b84.png" alt="إياد" />
+          <h4>إياد</h4>
+          <p>مبرمج و مدقق</p>
+          <div class="social-links">
+            <a
+              href="#"
+              onclick="copyDiscordUsername('css.8')"
+              class="social-icon discord"
+            >
+              <i class="fab fa-discord"></i>
+            </a>
+            <a
+              href="https://instagram.com/Stalk.dev"
+              target="_blank"
+              class="social-icon instagram"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a
+              href="https://x.com/stralkg"
+              target="_blank"
+              class="social-icon twitter"
+            >
+              <i class="fab fa-twitter"></i>
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
-    
-
-
 
     <!-- قسم الألعاب المعربة -->
     <section id="games">
-        <h3>الألعاب المعربة</h3>
-        <div class="games-container">
-            <div class="game-card-wrapper">
-                <a href="./html/Nubarron.html" class="game-card" onclick="showAnimation(event, './html/Nubarron.html')">
-                    <img src="./popy.png" alt="Touhou Luna Nights" class="game-image">
-                    <div class="game-info">
-                        <h4>اسم اللعبة</h4>
-                        <p>الاسم بالعربي</p>
-                        <div class="platforms">
-                            <i class="fas fa-gamepad platforms-icon"></i> الاجهزة المدعومة
-                        </div>
-                        <div class="release-date">
-                            <i class="far fa-calendar-alt release-date-icon"></i> تاريخ  النشر
-                        </div>
-                    </div>
-                </a>
+      <h3>الألعاب المعربة</h3>
+      <div class="games-container">
+        <a
+          href="Nubarron.html"
+          class="game-card"
+          onclick="showAnimation(event, 'Nubarron.html')"
+        >
+          <img
+            src="./Nubarron_20_05_2021_09_42_20_.png"
+            alt="Touhou Luna Nights"
+            class="game-image"
+          />
+          <div class="game-info">
+            <h4>اسم اللعبة</h4>
+            <p>الاسم بالعربي</p>
+            <div class="platforms">
+              <i class="fas fa-gamepad platforms-icon"></i> الاجهزة المدعومة
             </div>
-
+            <div class="release-date">
+              <i class="far fa-calendar-alt release-date-icon"></i> تاريخ النشر
+            </div>
+          </div>
+        </a>
+        <!-- لعبه ثانيى-->
+        <a
+          href="Nubarron.html"
+          class="game-card"
+          onclick="showAnimation(event, 'Nubarron.html')"
+        >
+          <img
+            src="./Nubarron_20_05_2021_09_42_20_.png"
+            alt="Touhou Luna Nights"
+            class="game-image"
+          />
+          <div class="game-info">
+            <h4>اسم اللعبة</h4>
+            <p>الاسم بالعربي</p>
+            <div class="platforms">
+              <i class="fas fa-gamepad platforms-icon"></i> الاجهزة المدعومة
+            </div>
+            <div class="release-date">
+              <i class="far fa-calendar-alt release-date-icon"></i> تاريخ النشر
+            </div>
+          </div>
+        </a>
+      </div>
     </section>
 
-
-
     <script>
-        const text = "مرحبًا بك في عالم الألعاب المعربة";
-        const loadingTextElement = document.querySelector(".loading-text");
+      const text = "مرحبًا بك في عالم الألعاب المعربة";
+      const loadingTextElement = document.querySelector(".loading-text");
 
-        let index = 0;
-        function typeText() {
-            if (index < text.length) {
-                loadingTextElement.innerHTML += text.charAt(index);
-                index++;
-                setTimeout(typeText, 66);
-            }
+      let index = 0;
+      function typeText() {
+        if (index < text.length) {
+          loadingTextElement.innerHTML += text.charAt(index);
+          index++;
+          setTimeout(typeText, 66);
         }
+      }
 
-        window.addEventListener("load", () => {
-            typeText();
-            setTimeout(() => {
-                document.getElementById("loader").style.opacity = '0';
-                setTimeout(() => {
-                    document.getElementById("loader").style.display = "none";
-                    document.body.style.overflow = 'auto';
-                }, 1000);
-            }, 4500);
-        });
+      window.addEventListener("load", () => {
+        typeText();
+        setTimeout(() => {
+          document.getElementById("loader").style.opacity = "0";
+          setTimeout(() => {
+            document.getElementById("loader").style.display = "none";
+            document.body.style.overflow = "auto";
+          }, 1000);
+        }, 4500);
+      });
 
-        function scrollToTeam() {
-            document.getElementById("about-section").scrollIntoView({ behavior: "smooth" });
-        }
+      function scrollToTeam() {
+        document
+          .getElementById("about-section")
+          .scrollIntoView({ behavior: "smooth" });
+      }
 
+      const cursorDot = document.createElement("div");
+      cursorDot.classList.add("cursor-dot");
+      document.body.appendChild(cursorDot);
 
-        const cursorDot = document.createElement("div");
-    cursorDot.classList.add("cursor-dot");
-    document.body.appendChild(cursorDot);
-
-    // تحديث موقع النقطة بحيث تتبع المؤشر بتدرج
-    document.addEventListener("mousemove", (event) => {
+      // تحديث موقع النقطة بحيث تتبع المؤشر بتدرج
+      document.addEventListener("mousemove", (event) => {
         // ضبط الموقع بإضافة انتقال سلس
         cursorDot.style.left = event.pageX + "px";
         cursorDot.style.top = event.pageY + "px";
-    });
+      });
 
-    function showAnimation(event, url) {
-    event.preventDefault(); // يمنع الانتقال الفوري
-    const card = event.currentTarget.closest('.game-card-wrapper');
-    card.classList.add('clicked'); // تفعيل أنيميشن النقر على البطاقة
-    
-    setTimeout(() => {
-        document.body.classList.add('fade-out'); // إضافة تأثير التلاشي للصفحة
+      function showAnimation(event, url) {
+        event.preventDefault(); // يمنع الانتقال الفوري
+        const card = event.currentTarget.closest(".game-card-wrapper");
+        card.classList.add("clicked"); // تفعيل أنيميشن النقر على البطاقة
+
         setTimeout(() => {
+          document.body.classList.add("fade-out"); // إضافة تأثير التلاشي للصفحة
+          setTimeout(() => {
             window.location.href = url; // الانتقال بعد انتهاء الأنيميشن
-        }, 1000); // وقت التلاشي التدريجي (1 ثانية)
-    }, 500); // وقت أنيميشن النقر (نصف ثانية)
-}
+          }, 1000); // وقت التلاشي التدريجي (1 ثانية)
+        }, 500); // وقت أنيميشن النقر (نصف ثانية)
+      }
 
-// التحقق مما إذا كان المستخدم قد زار الصفحة مسبقًا
-window.addEventListener('pageshow', (event) => {
-    // إذا كانت الصفحة تسترجع من الـ cache، يتم إعادة تحميل الصفحة
-    if (event.persisted || performance.getEntriesByType("navigation")[0].type === "back_forward") {
-        window.location.reload();
-    }
-});
-
-        // زر العودة لأعلى الصفحة
-        window.onscroll = function() {
-            const topButton = document.getElementById("back-to-top");
-            if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
-                topButton.style.display = "block";
-            } else {
-                topButton.style.display = "none";
-            }
-        };
-
-        function scrollToTop() {
-            window.scrollTo({ top: 0, behavior: "smooth" });
+      // التحقق مما إذا كان المستخدم قد زار الصفحة مسبقًا
+      window.addEventListener("pageshow", (event) => {
+        // إذا كانت الصفحة تسترجع من الـ cache، يتم إعادة تحميل الصفحة
+        if (
+          event.persisted ||
+          performance.getEntriesByType("navigation")[0].type === "back_forward"
+        ) {
+          window.location.reload();
         }
+      });
 
+      // زر العودة لأعلى الصفحة
+      window.onscroll = function () {
+        const topButton = document.getElementById("back-to-top");
+        if (
+          document.body.scrollTop > 500 ||
+          document.documentElement.scrollTop > 500
+        ) {
+          topButton.style.display = "block";
+        } else {
+          topButton.style.display = "none";
+        }
+      };
 
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
 
-
-        function copyDiscordUsername(username) {
+      function copyDiscordUsername(username) {
         // إنشاء عنصر input مؤقت لنسخ اسم المستخدم
-        const tempInput = document.createElement('input');
-        tempInput.value = username;  // نستخدم المتغير المرسل كاسم المستخدم
+        const tempInput = document.createElement("input");
+        tempInput.value = username; // نستخدم المتغير المرسل كاسم المستخدم
         document.body.appendChild(tempInput);
-        
+
         // تحديد النص داخل input
         tempInput.select();
         tempInput.setSelectionRange(0, 99999); // للهواتف
 
         // نسخ النص
-        document.execCommand('copy');
+        document.execCommand("copy");
 
         // إزالة عنصر input بعد النسخ
         document.body.removeChild(tempInput);
 
         // إظهار رسالة للمستخدم (اختياري)
         alert("تم نسخ اسم المستخدم: " + username);
-    }
+      }
 
+      //منع نسخ الكلام
+      document.addEventListener("copy", function (e) {
+        e.preventDefault();
+        alert("عذرًا، النسخ غير مسموح في هذا الموقع.");
+      });
+      document.addEventListener("cut", function (e) {
+        e.preventDefault();
+        alert("عذرًا، القص غير مسموح في هذا الموقع.");
+      });
+      document.addEventListener("paste", function (e) {
+        e.preventDefault();
+        alert("عذرًا، اللصق غير مسموح في هذا الموقع.");
+      });
+
+      // منع استخدام الزر الأيمن للماوس
+      document.addEventListener("contextmenu", function (e) {
+        e.preventDefault();
+        alert("عذرًا، استخدام الزر الأيمن للماوس غير مسموح في هذا الموقع.");
+      });
     </script>
-</body>
+  </body>
 </html>
