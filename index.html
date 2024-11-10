@@ -302,6 +302,27 @@
         window.scrollTo({ top: 0, behavior: "smooth" });
       }
 
+
+
+      //منع نسخ الكلام
+      document.addEventListener("copy", function (e) {
+        e.preventDefault();
+      });
+      document.addEventListener("cut", function (e) {
+        e.preventDefault();
+      });
+      document.addEventListener("paste", function (e) {
+        e.preventDefault();
+      });
+
+      // منع استخدام الزر الأيمن للماوس
+      document.addEventListener("contextmenu", function (e) {
+        e.preventDefault();
+      });
+
+
+
+
       function copyDiscordUsername(username) {
         // إنشاء عنصر input مؤقت لنسخ اسم المستخدم
         const tempInput = document.createElement("input");
@@ -322,25 +343,6 @@
         alert("تم نسخ اسم المستخدم: " + username);
       }
 
-      //منع نسخ الكلام
-      document.addEventListener("copy", function (e) {
-        e.preventDefault();
-        alert("عذرًا، النسخ غير مسموح في هذا الموقع.");
-      });
-      document.addEventListener("cut", function (e) {
-        e.preventDefault();
-        alert("عذرًا، القص غير مسموح في هذا الموقع.");
-      });
-      document.addEventListener("paste", function (e) {
-        e.preventDefault();
-        alert("عذرًا، اللصق غير مسموح في هذا الموقع.");
-      });
-
-      // منع استخدام الزر الأيمن للماوس
-      document.addEventListener("contextmenu", function (e) {
-        e.preventDefault();
-        alert("عذرًا، استخدام الزر الأيمن للماوس غير مسموح في هذا الموقع.");
-      });
     </script>
   </body>
 </html>
