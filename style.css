@@ -1,3 +1,8 @@
+*{
+  scroll-behavior: smooth;
+
+}
+
 /* ألوان الموقع */
 body {
   background-color: #0f161b;
@@ -246,7 +251,8 @@ body {
 .team-container {
   display: flex;
   align-items: center;
-  justify-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 20px;
 }
 .team-card {
@@ -284,6 +290,7 @@ body {
   font-size: 24px;
   margin: 0 10px;
   color: #fff;
+  text-decoration: none;
 }
 
 .social-icon:hover {
@@ -303,7 +310,7 @@ body {
 }
 
 /* قسم الألعاب */
-#games {
+.games {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -312,11 +319,11 @@ body {
   background-color: #0f161b;
   text-align: center;
 }
-#games h3 {
+.games h3 {
   font-size: 2.7em;
   color: white;
   margin-bottom: 30px;
-  
+
   border-bottom: #0e98aa 2px solid;
 }
 .games-container {
@@ -324,14 +331,12 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   gap: 40px;
-  padding:20px;
+  padding: 20px;
   background-color: #1a1f24;
   border-radius: 16px;
   width: 100%;
-  height: 24rem;
+  height: auto;
 }
-
-
 
 .game-card {
   background-color: #0f161b;
@@ -342,7 +347,6 @@ body {
   display: flex;
   flex-direction: column;
   transition: transform 0.3s ease;
-
 }
 .game-image {
   width: 100%;
@@ -377,14 +381,10 @@ body {
   font-size: 1.2em;
 }
 
-
-
-
 /* تأثير عند تمرير الفأرة */
 .game-card:hover {
   transform: scale(0.9);
   box-shadow: white 1px 2px 20px;
-
 }
 
 /* تأثير التلاشي التدريجي للصفحة */
@@ -477,9 +477,45 @@ footer {
   font-size: 1.5em;
   cursor: pointer;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-  transition: background 0.3s;
+  transition: all 0.3s;
 }
 #back-to-top:hover {
   background-color: #ffffff;
   color: #0e98aa;
+}
+
+/*mobile size and responsive*/
+
+@media screen and (max-width: 768px) {
+  #background-image {
+    width: 135%;
+  }
+
+  .about_Container{
+    flex-wrap: wrap-reverse;
+  }
+}
+
+
+@media screen and (max-width: 425px) {
+  #background-image {
+    width: 165%;
+  }
+
+ 
+  
+}
+
+@media screen and (max-width: 375px) {
+  #background-image {
+    width: 185%;
+  }
+
+}
+
+@media screen and (max-width: 320px) {
+  #background-image {
+    width: 220%;
+  }
+
 }
