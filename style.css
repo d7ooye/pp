@@ -177,6 +177,7 @@ body {
   align-items: center;
   flex-wrap: wrap;
   gap: 30px;
+  position: relative;
 }
 
 .about_Container p {
@@ -186,27 +187,27 @@ body {
 }
 
 .about_Container .img_about img {
-    position: relative;
-    display: block;
-    width: 250px;
-    height: 250px;
-  }
-  
-  .about_Container .img_about img::before,
-  .about_Container .img_about img::after {
-    content: "";
-    position: absolute;
-    bottom: 10px; 
-    right: 10px;
-    width: 50%; /* عرض أصغر لتجنب التداخل مع الصورة */
-    height: 30px; /* ارتفاع مناسب */
-    background-color: #0e98aa;
-    z-index: -1; /* التأكد من أن العناصر تظهر فوق الصورة */
-  }
-  
-  .about_Container img::after {
-    bottom: 0; /* تغيير مكان العنصر بعد */
-  }
+  position: relative;
+  width: 250px;
+  height: 250px;
+}
+
+.about_Container .img_about::before {
+  content: "";
+  position: absolute;
+  right: 90px;
+  width: 20%;
+  z-index: 0;
+  top: 0;
+  height: 250px;
+  border-radius: 150px;
+  background-color: transparent;
+  transition: all 0.7s ease-in-out;
+}
+
+.about_Container .img_about:hover::before {
+  background-color: #0e98aa;
+}
 
 .about-stats {
   display: flex;
