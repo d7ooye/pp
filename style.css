@@ -1,6 +1,5 @@
-*{
+* {
   scroll-behavior: smooth;
-
 }
 
 /* ألوان الموقع */
@@ -104,6 +103,10 @@ body {
   width: 100%;
   height: 100vh;
   overflow: hidden;
+  background-image: url(./red_dead_background_3.jpg);
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
 #background-image {
@@ -487,35 +490,33 @@ footer {
 /*mobile size and responsive*/
 
 @media screen and (max-width: 768px) {
-  #background-image {
-    width: 135%;
+  #image-container {
+    background-image: url(./mb.png);
+    width: auto;
+    height: 60rem;
   }
 
-  .about_Container{
+  .about_Container {
     flex-wrap: wrap-reverse;
   }
 }
 
-
 @media screen and (max-width: 425px) {
-  #background-image {
-    width: 165%;
-  }
+  #image-container {
+    height: 42rem;
 
- 
-  
+  }
 }
 
 @media screen and (max-width: 375px) {
-  #background-image {
-    width: 185%;
-  }
+  #image-container {
+    height: 39rem;
 
+  }
 }
 
 @media screen and (max-width: 320px) {
-  #background-image {
-    width: 220%;
+  #image-container {
+    height: 35rem;
   }
-
 }
