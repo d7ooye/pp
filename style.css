@@ -24,7 +24,6 @@ body {
   align-items: center;
   justify-content: space-between;
   z-index: 999;
-  overflow: scroll;
 }
 
 /* تنسيق اللوقو */
@@ -491,6 +490,10 @@ footer {
 /*mobile size and responsive*/
 
 @media screen and (max-width: 768px) {
+  #header {
+    overflow: scroll;
+  }
+
   #image-container {
     background-image: url(./mb.png);
     width: auto;
@@ -505,14 +508,12 @@ footer {
 @media screen and (max-width: 425px) {
   #image-container {
     height: 42rem;
-
   }
 }
 
 @media screen and (max-width: 375px) {
   #image-container {
     height: 39rem;
-
   }
 }
 
