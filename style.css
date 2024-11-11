@@ -494,6 +494,7 @@ footer {
   align-items: center;
   justify-content: center;
   background-color: #0f161b;
+  flex-direction: column;
   height: 40rem;
   color: white;
 }
