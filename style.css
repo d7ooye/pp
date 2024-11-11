@@ -499,6 +499,14 @@ footer {
   color: white;
 }
 
+.Contact_COntainer > h1 {
+  font-size: 2.7em;
+  color: white;
+  margin-bottom: 30px;
+
+  border-bottom: #0e98aa 2px solid;
+}
+
 #contact-form {
   display: flex;
   flex-direction: column;
@@ -521,6 +529,7 @@ footer {
   transition: all 0.5s ease-in-out;
   background-color: #ffffff12;
   border: 1px solid white;
+  color: white;
 }
 
 #contact-form input:focus {
@@ -542,6 +551,8 @@ footer {
   max-height: 210px;
   background-color: #ffffff12;
   border: 1px solid white;
+  color: white;
+
 }
 
 #contact-form textarea:focus {
@@ -567,8 +578,8 @@ footer {
   cursor: pointer;
 }
 
-#contact-form > p{
-    text-align: center;
+#contact-form > p {
+  text-align: center;
 }
 
 /*mobile size and responsive*/
@@ -599,7 +610,7 @@ footer {
     border-bottom: black solid 5px;
     transition: all 0.5s ease-in-out;
   }
-  
+
   #contact-form input {
     padding: 5px;
     height: 3rem;
@@ -611,8 +622,6 @@ footer {
     background-color: #ffffff12;
     border: 1px solid white;
   }
-
-
 }
 
 @media screen and (max-width: 425px) {
