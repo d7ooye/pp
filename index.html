@@ -25,15 +25,16 @@
   للملايين من اللاعبين العرب حول العالم. "
     />
     <meta
-      property="og:image"
-      content="https://images-ext-1.discordapp.net/external/gbPQpVf-ZtKKYkim-ImnuN5C1-0UUW7oq-GWQhG1Dy4/%3Fsize%3D1024/https/cdn.discordapp.com/icons/819496464392257536/104e29c94fe8a8e4e7d0c7832c6a7b84.png?format=webp&quality=lossless&width=473&height=473"
-    />
-    <meta
-      name="google-site-verification"
-      content="rixLxx5zkprdrGgYltEcMc7tzs9y56mYuRXLOTz-1gg"
-    />
+    property="og:image"
+    content="./png/icon.ico"
+  />
+  <meta
+    name="google-site-verification"
+    content="rixLxx5zkprdrGgYltEcMc7tzs9y56mYuRXLOTz-1gg"
+  />
+  
     <meta property="og:url" content="https://d7ooye.github.io/pp/" />
-    <link rel="shortcut icon" href="ARAB.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="./png/icon.ico" type="image/x-icon" />
     <title>العب بالعربي</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Cairo:wght@500&family=Roboto:wght@700&display=swap"
@@ -48,12 +49,10 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="./style.css" />
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <!-- تضمين مكتبة EmailJS -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
-    <!-- تضمين ملف JavaScript الخارجي -->
-    <script src="path/to/email.js" defer></script>
   </head>
   <body>
     <!-- اللودر -->
@@ -64,7 +63,7 @@
     <!-- الهيدر -->
     <header id="header">
       <div id="logo">
-        <img src="ARAB.png" alt="لوقو" />
+        <img src="./png/icon.ico" alt="لوقو" />
       </div>
       <div id="nav-container">
         <nav id="nav">
@@ -98,7 +97,7 @@
           </p>
         </div>
         <div class="img_about">
-          <img src="./ARAB.png" alt="img" />
+          <img src="./png/icon.ico" alt="img" />
         </div>
       </div>
     </section>
@@ -109,12 +108,11 @@
       <h3>فريقنا</h3>
       <div class="team-container">
         <div class="team-card">
-          <img src="./ARAB.png" alt="محمد" />
-          <h4>محمد</h4>
+          <img src="./members/ikrp.png" alt="محمد حسين" />
+          <h4>محمد حسين</h4>
           <p>مبرمج و مدقق</p>
           <div class="social-links">
             <a
-              href="#"
               onclick="copyDiscordUsername('ikrp')"
               class="social-icon discord"
             >
@@ -138,12 +136,11 @@
         </div>
 
         <div class="team-card">
-          <img src="./Eiad.png" alt="إياد" />
+          <img src="./members/Eiad.png" alt="إياد" />
           <h4>إياد</h4>
           <p>مبرمج و مدقق</p>
           <div class="social-links">
             <a
-              href="#"
               onclick="copyDiscordUsername('css.8')"
               class="social-icon discord"
             >
@@ -168,20 +165,19 @@
 
         <div class="team-card">
           <img
-            src="https://media.discordapp.net/attachments/1302360337584226334/1305641750294958211/84623e0d3e7a9ac5.jpg?ex=6733c522&is=673273a2&hm=2fd4b5552e0f94b55e020f648c8c11174189f02e93935637d7bc65f42559d176&=&format=webp&width=395&height=473"
+            src="./members/mr_red.png"
             alt="رضا"
           />
           <h4>رضا</h4>
           <p>مبرمج و مدقق</p>
           <div class="social-links">
             <a
-              href="#"
-              onclick="copyDiscordUsername('r17e')"
-              class="social-icon discord"
-            >
-              <i class="fab fa-discord"></i>
-            </a>
-
+            onclick="copyDiscordUsername('r17e')"
+            class="social-icon discord"
+          >
+            <i class="fab fa-discord"></i>
+          </a>
+          
             <a
               href="https://x.com/350reda"
               target="_blank"
@@ -197,44 +193,179 @@
     <!-- قسم الألعاب المعربة -->
     <section id="translations" class="games">
       <h3>الألعاب المعربة</h3>
+        
+      <!--لعبه -->
+
       <div class="games-container">
-        <a href="./Nubarron.html" class="game-card">
+        <a href="./games/Nubarron/index.html" class="game-card">
           <img
-            src="./Nubarron_20_05_2021_09_42_20_.png"
-            alt="Touhou Luna Nights"
+            src="./games/Nubarron/back_Nubarron.jpg"
+            alt="Nubarron"
             class="game-image"
           />
           <div class="game-info">
-            <h4>اسم اللعبة</h4>
-            <p>الاسم بالعربي</p>
+            <h4>Nubarron</h4>
+            <p> نوبارون</p>
             <div class="platforms">
-              <i class="fas fa-gamepad platforms-icon"></i> الاجهزة المدعومة
+              <i class="fas fa-gamepad platforms-icon"></i>   PC , Nintendo Switch 
             </div>
             <div class="release-date">
-              <i class="far fa-calendar-alt release-date-icon"></i> تاريخ النشر
+              <i class="far fa-calendar-alt release-date-icon"></i>  05/20/2021
             </div>
           </div>
         </a>
-        <!-- لعبه ثانيى-->
-        <a href="Nubarron.html" class="game-card">
+       
+        <!--لعبه -->
+        <a href="./games/bat_man/index.html" class="game-card">
           <img
-            src="./Nubarron_20_05_2021_09_42_20_.png"
-            alt="Touhou Luna Nights"
+            src="./games/bat_man/bat_back.png"
+            alt="bat_back"
             class="game-image"
           />
           <div class="game-info">
-            <h4>اسم اللعبة</h4>
-            <p>الاسم بالعربي</p>
+            <h4>Batman arkham city</h4>
+            <p>باتمان فارس اركام </p>
             <div class="platforms">
-              <i class="fas fa-gamepad platforms-icon"></i> الاجهزة المدعومة
+              <i class="fas fa-gamepad platforms-icon"></i>  PC
             </div>
             <div class="release-date">
-              <i class="far fa-calendar-alt release-date-icon"></i> تاريخ النشر
+              <i class="far fa-calendar-alt release-date-icon"></i>  10/29/2024
             </div>
           </div>
         </a>
-      </div>
-    </section>
+
+
+              <!--لعبه -->
+
+      <a href="./games/Astroneer/index.html" class="game-card">
+        <img
+          src="./games/Astroneer/back_Astroneer.jpg"
+          alt="Astroneer"
+          class="game-image"
+        />
+        <div class="game-info">
+          <h4>Astroneer</h4>
+          <p>  رائد فضاء </p>
+          <div class="platforms">
+            <i class="fas fa-gamepad platforms-icon"></i>  PC , PS4
+          </div>
+          <div class="release-date">
+            <i class="far fa-calendar-alt release-date-icon"></i>  05/21/2021 
+          </div>
+        </div>
+      </a>
+
+              <!--لعبه -->
+
+              <a href="./games/Black_The_Fall/index.html" class="game-card">
+                <img
+                  src="./games/Black_The_Fall/back_the.jpg"
+                  alt="Black_The_Fall"
+                  class="game-image"
+                />
+                <div class="game-info">
+                  <h4>Black The Fall</h4>
+                  <p>   بلاك ذا فال </p>
+                  <div class="platforms">
+                    <i class="fas fa-gamepad platforms-icon"></i>  PC , Nintendo Switch
+                  </div>
+                  <div class="release-date">
+                    <i class="far fa-calendar-alt release-date-icon"></i>  05/31/2021 
+                  </div>
+                </div>
+              </a>
+
+
+
+                          <!--لعبه -->
+
+      <a href="./games/the_cave/index.html" class="game-card">
+        <img
+          src="./games/the_cave/the_cave.jpg"
+          alt="the cave"
+          class="game-image"
+        />
+        <div class="game-info">
+          <h4>The Cave</h4>
+          <p>   الكهف </p>
+          <div class="platforms">
+            <i class="fas fa-gamepad platforms-icon"></i>  PC
+          </div>
+          <div class="release-date">
+            <i class="far fa-calendar-alt release-date-icon"></i>  08/03/2023
+          </div>
+        </div>
+      </a>
+
+                          <!--لعبه -->
+
+      <a href="./games/valfaris/index.html" class="game-card">
+        <img
+          src="./games/valfaris/3.png"
+          alt="valfaris"
+          class="game-image"
+        />
+        <div class="game-info">
+          <h4>Valfaris</h4>
+          <p>   فالفاريس </p>
+          <div class="platforms">
+            <i class="fas fa-gamepad platforms-icon"></i>  PC
+          </div>
+          <div class="release-date">
+            <i class="far fa-calendar-alt release-date-icon"></i>  12/27/2021
+          </div>
+        </div>
+      </a>
+
+
+                          <!--لعبه -->
+
+      <a href="./games/ghostrunner/index.html" class="game-card">
+        <img
+          src="./games/ghostrunner/back.jpg"
+          alt="ghostrunner"
+          class="game-image"
+        />
+        <div class="game-info">
+          <h4>Ghostrunner</h4>
+          <p>   فالفاريس </p>
+          <div class="platforms">
+            <i class="fas fa-gamepad platforms-icon"></i>  PC
+          </div>
+          <div class="release-date">
+            <i class="far fa-calendar-alt release-date-icon"></i> 12/29/2021
+          </div>
+        </div>
+      </a>
+  
+  
+      <!--لعبه -->
+
+
+      <a href="./games/far_lone_sails/index.html" class="game-card">
+        <img
+          src="./games/far_lone_sails/back.jpg"
+          alt="ghostrunner"
+          class="game-image"
+        />
+        <div class="game-info">
+          <h4>far lone sails</h4>
+          <p>   فار لون سيلز </p>
+          <div class="platforms">
+            <i class="fas fa-gamepad platforms-icon"></i>  PC
+          </div>
+          <div class="release-date">
+            <i class="far fa-calendar-alt release-date-icon"></i>  10/24/2022
+          </div>
+        </div>
+      </a>
+
+
+
+
+    </div>             
+  </section>
+
 
     <div class="Contact_COntainer" id="Contact">
       <h1>التواصل</h1>
@@ -247,7 +378,7 @@
           required
           placeholder="Name"
         />
-
+    
         <label for="user_email">Email</label>
         <input
           type="email"
@@ -256,7 +387,7 @@
           required
           placeholder="Email"
         />
-
+    
         <label for="message">Message</label>
         <textarea
           id="message"
@@ -264,147 +395,19 @@
           required
           placeholder="Message"
         ></textarea>
-
+    
         <input type="submit" value="Send" />
       </form>
       <p>نرد عادةً خلال 24 ساعة</p>
     </div>
+    
 
-    <script>
-      const text = "استعد للانغماس في عوالم جديدة بالعربية!";
-      const loadingTextElement = document.querySelector(".loading-text");
+    <div id="copy-notification">تم نسخ اسم العضو</div>
 
-      let index = 0;
-      function typeText() {
-        if (index < text.length) {
-          loadingTextElement.innerHTML += text.charAt(index);
-          index++;
-          setTimeout(typeText, 66);
-        }
-      }
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
-      window.addEventListener("load", () => {
-        typeText();
-        setTimeout(() => {
-          document.getElementById("loader").style.opacity = "0";
-          setTimeout(() => {
-            document.getElementById("loader").style.display = "none";
-            document.body.style.overflow = "auto";
-          }, 1000);
-        }, 4500);
-      });
-
-      function scrollToTeam() {
-        document
-          .getElementById("about-section")
-          .scrollIntoView({ behavior: "smooth" });
-      }
-
-      const cursorDot = document.createElement("div");
-      cursorDot.classList.add("cursor-dot");
-      document.body.appendChild(cursorDot);
-
-      // تحديث موقع النقطة بحيث تتبع المؤشر بتدرج
-      document.addEventListener("mousemove", (event) => {
-        // ضبط الموقع بإضافة انتقال سلس
-        cursorDot.style.left = event.pageX + "px";
-        cursorDot.style.top = event.pageY + "px";
-      });
-
-      function showAnimation(event, url) {
-        event.preventDefault(); // يمنع الانتقال الفوري
-        const card = event.currentTarget.closest(".game-card-wrapper");
-        card.classList.add("clicked"); // تفعيل أنيميشن النقر على البطاقة
-
-        setTimeout(() => {
-          document.body.classList.add("fade-out"); // إضافة تأثير التلاشي للصفحة
-          setTimeout(() => {
-            window.location.href = url; // الانتقال بعد انتهاء الأنيميشن
-          }, 1000); // وقت التلاشي التدريجي (1 ثانية)
-        }, 500); // وقت أنيميشن النقر (نصف ثانية)
-      }
-
-      // التحقق مما إذا كان المستخدم قد زار الصفحة مسبقًا
-      window.addEventListener("pageshow", (event) => {
-        // إذا كانت الصفحة تسترجع من الـ cache، يتم إعادة تحميل الصفحة
-        if (
-          event.persisted ||
-          performance.getEntriesByType("navigation")[0].type === "back_forward"
-        ) {
-          window.location.reload();
-        }
-      });
-
-      // زر العودة لأعلى الصفحة
-      window.onscroll = function () {
-        const topButton = document.getElementById("back-to-top");
-        if (
-          document.body.scrollTop > 500 ||
-          document.documentElement.scrollTop > 500
-        ) {
-          topButton.style.display = "block";
-        } else {
-          topButton.style.display = "none";
-        }
-      };
-
-      function scrollToTop() {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      }
-
-      //Contact
-      // إضافة دالة sendEmail لإرسال البريد الإلكتروني
-      function sendEmail(event) {
-        event.preventDefault();
-
-        emailjs
-          .sendForm(
-            "service_vwdgcap", // معرّف الخدمة
-            "template_1ui072j", // معرّف القالب
-            document.getElementById("contact-form")
-          )
-          .then(
-            (result) => {
-              alert("Message sent successfully!");
-            },
-            (error) => {
-              alert("Failed to send message. Please try again.");
-            }
-          );
-      }
-
-      //منع نسخ الكلام
-      document.addEventListener("copy", function (e) {
-        e.preventDefault();
-      });
-      document.addEventListener("cut", function (e) {
-        e.preventDefault();
-      });
-      document.addEventListener("paste", function (e) {
-        e.preventDefault();
-      });
-
-      // منع استخدام الزر الأيمن للماوس
-      document.addEventListener("contextmenu", function (e) {
-        e.preventDefault();
-      });
-
-      function copyDiscordUsername(username) {
-        // إنشاء عنصر input مؤقت لنسخ اسم المستخدم
-        const tempInput = document.createElement("input");
-        tempInput.value = username; // نستخدم المتغير المرسل كاسم المستخدم
-        document.body.appendChild(tempInput);
-
-        // تحديد النص داخل input
-        tempInput.select();
-        tempInput.setSelectionRange(0, 99999); // للهواتف
-
-        // نسخ النص
-        document.execCommand("copy");
-
-        // إزالة عنصر input بعد النسخ
-        document.body.removeChild(tempInput);
-      }
-    </script>
+    <script src="./index.js"></script>
+ 
   </body>
 </html>

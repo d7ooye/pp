@@ -1,6 +1,9 @@
 * {
   scroll-behavior: smooth;
+  -webkit-user-drag: none; /* Safari */
+  user-drag: none; /
 }
+
 
 /* ألوان الموقع */
 body {
@@ -10,6 +13,10 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  -webkit-user-select: none; 
+  -moz-user-select: none; 
+  -ms-user-select: none; 
+  user-select: none;
 }
 
 /* تنسيق الهيدر */
@@ -103,7 +110,7 @@ body {
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  background-image: url(./red_dead_background_3.jpg);
+  background-image: url(./png/red_dead_background_3.jpg);
   background-position: center;
   background-size: 100%;
   background-repeat: no-repeat;
@@ -590,7 +597,7 @@ footer {
   }
 
   #image-container {
-    background-image: url(./mb.png);
+    background-image: url(./png/mb.png);
     width: auto;
     height: 60rem;
   }
@@ -641,3 +648,44 @@ footer {
     height: 35rem;
   }
 }
+
+/*اشعار النسخ*/
+
+#copy-notification {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(14, 152, 170, 0.9);
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.2em;
+  font-family: "Cairo", sans-serif;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1000;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#copy-notification.show {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+
+img {
+  pointer-events: none;
+  -webkit-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
+
+
+
+
+
+
+
+
