@@ -19,7 +19,7 @@ if (loadingTextElement) {
         document.getElementById("loader").style.display = "none";
         document.body.style.overflow = "auto";
       }, 1000);
-    }, 2700);
+    }, 1999);
   });
 }
 function scrollToTeam() {
