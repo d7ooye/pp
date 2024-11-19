@@ -34,7 +34,7 @@
         }
         .content-container {
             border-radius: 15px;
-            max-width: 900px;
+            max-width: 100%;
             padding: 20px;
             margin: 20px auto;
             text-align: right;
@@ -146,22 +146,7 @@
         #lightbox .close { top: 20px; right: 20px; }
         #lightbox .prev { left: 10px; }
         #lightbox .next { right: 10px; }
-        #splash-screen {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: #0f161b;
-            color: #0e98aa;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2em;
-            z-index: 10;
-            opacity: 1;
-            transition: opacity 1s;
-        }
+        
         .cursor-dot {
             position: absolute;
             width: 12px;
@@ -231,97 +216,6 @@
     </div>
 
     
-    <script>
-        const cursorDot = document.createElement("div");
-        cursorDot.classList.add("cursor-dot");
-        document.body.appendChild(cursorDot);
-        document.addEventListener("mousemove", (event) => {
-            cursorDot.style.left = event.pageX + "px";
-            cursorDot.style.top = event.pageY + "px";
-        });
 
-        let currentImageIndex = 0;
-        const images = document.querySelectorAll(".gallery img");
-
-        function showImage(index) {
-            images.forEach((img, i) => img.classList.toggle("active", i === index));
-        }
-        function nextImage() {
-            currentImageIndex = (currentImageIndex + 1) % images.length;
-            showImage(currentImageIndex);
-        }
-        function previousImage() {
-            currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
-            showImage(currentImageIndex);
-        }
-        setInterval(nextImage, 3000);
-
-        const gallery = document.getElementById("gallery");
-        const lightbox = document.getElementById("lightbox");
-        const lightboxImg = document.getElementById("lightbox-img");
-        gallery.addEventListener("click", () => {
-            lightboxImg.src = images[currentImageIndex].src;
-            lightbox.style.display = "flex";
-        });
-        lightbox.addEventListener("click", (e) => {
-            if (e.target.classList.contains("close") || e.target === lightbox) {
-                lightbox.style.display = "none";
-            }
-        });
-        document.querySelector(".prev").addEventListener("click", () => {
-            previousImage();
-            lightboxImg.src = images[currentImageIndex].src;
-        });
-        document.querySelector(".next").addEventListener("click", () => {
-            nextImage();
-            lightboxImg.src = images[currentImageIndex].src;
-        });
-
-        document.addEventListener("contextmenu", (e) => {
-            if (e.target.tagName === "IMG") {
-                e.preventDefault();
-            }
-        });
-
-        window.addEventListener("load", () => {
-            setTimeout(() => {
-                document.getElementById("splash-screen").style.opacity = "0";
-                setTimeout(() => {
-                    document.getElementById("splash-screen").style.display = "none";
-                    document.querySelectorAll(".fade-in").forEach(el => el.classList.add("visible"));
-                }, 1000);
-            }, 2000);
-        });
-    
-    
-        document.addEventListener("keydown", function (event) {
-    // تعطيل F12
-    if (event.keyCode === 123) {
-        event.preventDefault();
-    }
-    // تعطيل Ctrl + Shift + I
-    if (event.ctrlKey && event.shiftKey && event.keyCode === 73) {
-        event.preventDefault();
-    }
-    // تعطيل Ctrl + U
-    if (event.ctrlKey && event.keyCode === 85) {
-        event.preventDefault();
-    }
-});
-
-document.addEventListener("contextmenu", function (event) {
-    // منع النقر بزر الفأرة الأيمن على الصور
-    if (event.target.tagName === "IMG") {
-        event.preventDefault();
-    }
-});
-
-document.addEventListener("contextmenu", (e) => {
-    e.preventDefault();
-});
-
-    
-
-    </script>
 </body>
 </html>

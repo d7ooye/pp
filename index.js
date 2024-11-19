@@ -1,26 +1,27 @@
 const text = "استعد للانغماس في عوالم جديدة بالعربية!";
 const loadingTextElement = document.querySelector(".loading-text");
 
-let index = 0;
-function typeText() {
-  if (index < text.length) {
-    loadingTextElement.innerHTML += text.charAt(index);
-    index++;
-    setTimeout(typeText, 66);
+if (loadingTextElement) {
+  let index = 0;
+  function typeText() {
+    if (index < text.length) {
+      loadingTextElement.innerHTML += text.charAt(index);
+      index++;
+      setTimeout(typeText, 40);
+    }
   }
-}
 
-window.addEventListener("load", () => {
-  typeText();
-  setTimeout(() => {
-    document.getElementById("loader").style.opacity = "0";
+  window.addEventListener("load", () => {
+    typeText();
     setTimeout(() => {
-      document.getElementById("loader").style.display = "none";
-      document.body.style.overflow = "auto";
-    }, 1000);
-  }, 4500);
-});
-
+      document.getElementById("loader").style.opacity = "0";
+      setTimeout(() => {
+        document.getElementById("loader").style.display = "none";
+        document.body.style.overflow = "auto";
+      }, 1000);
+    }, 2700);
+  });
+}
 function scrollToTeam() {
   document
     .getElementById("about-section")
