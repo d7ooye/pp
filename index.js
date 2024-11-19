@@ -7,7 +7,7 @@ if (loadingTextElement) {
     if (index < text.length) {
       loadingTextElement.innerHTML += text.charAt(index);
       index++;
-      setTimeout(typeText, 40);
+      setTimeout(typeText, 25);
     }
   }
 
@@ -19,7 +19,7 @@ if (loadingTextElement) {
         document.getElementById("loader").style.display = "none";
         document.body.style.overflow = "auto";
       }, 1000);
-    }, 1999);
+    }, 1400);
   });
 }
 function scrollToTeam() {
